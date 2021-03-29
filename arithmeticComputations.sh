@@ -5,4 +5,6 @@ read -p "Enter Number c= " c
 echo "a= "$a",b= "$b",c= "$c
 arithmetic1=$(($a+$b*$c))
 arithmetic2=$(($a*$b+$c))
-echo $arithmetic1,$arithmetic2
+arithmetic3=$(($c+$a/$b))
+echo $arithmetic1,$arithmetic2,$arithmetic3
+
