@@ -34,4 +34,17 @@ do
 		fi
 	done
 done
-echo ${arithmeticArray[@]}
+
+for((i=0;i<$arrayLength;i++))
+do
+   for((j=0;j<$(($arrayLength-$i-1));j++))
+   do
+      if [ ${arithmeticArray[$j]} -gt ${arithmeticArray[$(($j+1))]} ]
+      then
+         temp=${arithmeticArray[$(($j+1))]}
+         arithmeticArray[$(($j+1))]=${arithmeticArray[$j]}
+         arithmeticArray[$j]=$temp
+      fi
+   done
+done
+echo "Ascending Sort: "${arithmeticArray[@]}
