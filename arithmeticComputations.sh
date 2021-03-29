@@ -34,4 +34,4 @@ do
 		fi
 	done
 done
-echo ${arithmeticArray[@]}
+echo "Descending Sort: "${arithmeticArray[@]}
